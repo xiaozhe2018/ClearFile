@@ -16,11 +16,14 @@ A native macOS disk cleaner built with Swift and SwiftUI. Scan your disk, remove
 | **Duplicate Files** | SHA-256 hash comparison to find exact duplicates |
 | **App Uninstaller** | Remove apps and all associated leftover files |
 | **Developer Tools** | Clean Xcode DerivedData, npm/yarn cache, Docker builder cache |
+| **Search & Delete** | Search files by name/extension/size and batch delete |
 | **Clean Report** | History log of every cleaning session |
 
 ---
 
 ## Screenshots
+
+> Screenshots show the English UI. The app automatically switches between Chinese and English based on your system language.
 
 <table>
   <tr>

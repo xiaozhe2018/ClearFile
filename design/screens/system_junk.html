@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ClearFile - System Junk</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-dim": "#0050ab",
+                        "primary-fixed-dim": "#006ee6",
+                        "on-primary-container": "#000000",
+                        "tertiary": "#685781",
+                        "secondary-fixed": "#dae2f9",
+                        "on-surface": "#2e3336",
+                        "tertiary-fixed": "#e4ceff",
+                        "inverse-primary": "#4b8eff",
+                        "surface-dim": "#d7dadf",
+                        "surface": "#f9f9fb",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed-variant": "#535b6e",
+                        "on-secondary-fixed": "#373f51",
+                        "error-dim": "#67040d",
+                        "tertiary-fixed-dim": "#d6c1f0",
+                        "on-secondary-container": "#4a5264",
+                        "surface-container": "#eceef1",
+                        "surface-bright": "#f9f9fb",
+                        "outline": "#777b7f",
+                        "on-tertiary-fixed-variant": "#5d4d75",
+                        "on-secondary": "#f9f8ff",
+                        "on-error-container": "#6e0a12",
+                        "surface-container-high": "#e6e8ec",
+                        "on-primary-fixed-variant": "#f8f8ff",
+                        "background": "#f9f9fb",
+                        "on-tertiary-fixed": "#403157",
+                        "secondary-dim": "#4b5366",
+                        "primary-container": "#007aff",
+                        "surface-container-low": "#f2f4f6",
+                        "tertiary-dim": "#5c4b74",
+                        "inverse-on-surface": "#9c9d9f",
+                        "on-tertiary-container": "#54436b",
+                        "on-error": "#fff7f6",
+                        "on-background": "#2e3336",
+                        "inverse-surface": "#0c0e10",
+                        "primary": "#005bc2",
+                        "surface-container-highest": "#dfe3e7",
+                        "tertiary-container": "#e4ceff",
+                        "on-primary-fixed": "#ffffff",
+                        "error-container": "#fa746f",
+                        "secondary-container": "#dae2f9",
+                        "on-surface-variant": "#5b6063",
+                        "primary-fixed": "#007aff",
+                        "secondary": "#575f72",
+                        "surface-variant": "#dfe3e7",
+                        "error": "#a83836",
+                        "surface-tint": "#005bc2",
+                        "secondary-fixed-dim": "#ccd4eb",
+                        "outline-variant": "#aeb2b6",
+                        "on-tertiary": "#fef7ff",
+                        "on-primary": "#f9f8ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .apple-shadow {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+    </style>
+</head>
+<body class="bg-surface-container-lowest text-on-surface antialiased flex h-screen overflow-hidden">
+<!-- SideNavBar Shell -->
+<aside class="w-[220px] h-full flex flex-col py-6 bg-[#F5F5F7] border-r border-[#D2D2D7] fixed left-0 top-0">
+<div class="px-6 mb-8 flex items-center gap-2">
+<span class="material-symbols-outlined text-[#007AFF]" style="font-variation-settings: 'FILL' 1;">cleaning_services</span>
+<h1 class="text-lg font-bold text-[#1D1D1F]">ClearFile</h1>
+</div>
+<nav class="flex-1 px-3 space-y-1">
+<!-- Navigation Items Mapping from JSON -->
+<div class="flex items-center gap-3 px-3 py-2 text-[#6E6E73] hover:bg-[#E8E8ED] rounded-lg transition-colors duration-200 ease-in-out cursor-default font-sans text-sm font-medium">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Overview</span>
+</div>
+<!-- Active State: System Junk -->
+<div class="flex items-center gap-3 px-3 py-2 bg-[#E8F3FF] text-[#007AFF] rounded-lg transition-colors duration-200 ease-in-out cursor-default font-sans text-sm font-medium">
+<span class="material-symbols-outlined" data-icon="delete" style="font-variation-settings: 'FILL' 1;">delete</span>
+<span>System Junk</span>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 text-[#6E6E73] hover:bg-[#E8E8ED] rounded-lg transition-colors duration-200 ease-in-out cursor-default font-sans text-sm font-medium">
+<span class="material-symbols-outlined" data-icon="folder_zip">folder_zip</span>
+<span>Large Files</span>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 text-[#6E6E73] hover:bg-[#E8E8ED] rounded-lg transition-colors duration-200 ease-in-out cursor-default font-sans text-sm font-medium">
+<span class="material-symbols-outlined" data-icon="content_copy">content_copy</span>
+<span>Duplicates</span>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 text-[#6E6E73] hover:bg-[#E8E8ED] rounded-lg transition-colors duration-200 ease-in-out cursor-default font-sans text-sm font-medium">
+<span class="material-symbols-outlined" data-icon="apps">apps</span>
+<span>App Uninstaller</span>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 text-[#6E6E73] hover:bg-[#E8E8ED] rounded-lg transition-colors duration-200 ease-in-out cursor-default font-sans text-sm font-medium">
+<span class="material-symbols-outlined" data-icon="terminal">terminal</span>
+<span>Developer Tools</span>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 text-[#6E6E73] hover:bg-[#E8E8ED] rounded-lg transition-colors duration-200 ease-in-out cursor-default font-sans text-sm font-medium">
+<span class="material-symbols-outlined" data-icon="assessment">assessment</span>
+<span>Clean Report</span>
+</div>
+</nav>
+<div class="px-6 mt-auto">
+<div class="bg-white p-3 rounded-xl apple-shadow border border-[#D2D2D7]/30">
+<div class="text-[10px] text-[#6E6E73] uppercase tracking-wider font-bold mb-1">Storage</div>
+<div class="w-full h-1 bg-[#E8E8ED] rounded-full overflow-hidden">
+<div class="h-full bg-[#007AFF] w-3/4"></div>
+</div>
+<div class="mt-1.5 text-[11px] text-[#1D1D1F] font-semibold">128 GB of 512 GB free</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-[220px] flex-1 flex flex-col min-w-0 bg-white">
+<!-- TopAppBar -->
+<header class="flex items-center justify-between w-full h-16 px-8 sticky top-0 z-50 bg-white/80 backdrop-blur-md">
+<div class="flex items-center gap-4">
+<h2 class="text-xl font-bold text-[#1D1D1F]">System Junk</h2>
+<span class="bg-[#FF9500]/10 text-[#FF9500] text-xs font-bold px-2 py-0.5 rounded-full">3.8 GB found</span>
+</div>
+<button class="bg-[#007AFF] hover:bg-[#005bc2] text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors">
+                Clean All
+            </button>
+</header>
+<!-- Content Area -->
+<div class="flex-1 overflow-y-auto p-8 pt-0 space-y-4">
+<!-- Accordion Group -->
+<div class="space-y-3">
+<!-- Expanded Row: User Caches -->
+<div class="border border-[#D2D2D7] rounded-xl overflow-hidden apple-shadow">
+<div class="bg-surface-container-low p-4 flex items-center justify-between cursor-pointer">
+<div class="flex items-center gap-4">
+<input checked="" class="w-4 h-4 rounded text-[#007AFF] border-[#D2D2D7] focus:ring-[#007AFF]" type="checkbox"/>
+<span class="material-symbols-outlined text-[#007AFF]">cached</span>
+<div>
+<h3 class="font-semibold text-sm text-[#1D1D1F]">User Caches</h3>
+<p class="text-xs text-[#6E6E73]">Application cache files for faster performance</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-sm font-bold text-[#1D1D1F]">2.1 GB</span>
+<span class="material-symbols-outlined text-[#6E6E73]">expand_less</span>
+</div>
+</div>
+<!-- Expanded Sub-list -->
+<div class="bg-white px-12 py-3 divide-y divide-[#D2D2D7]/30">
+<div class="py-2 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<input checked="" class="w-4 h-4 rounded text-[#007AFF] border-[#D2D2D7] focus:ring-[#007AFF]" type="checkbox"/>
+<span class="text-sm text-[#1D1D1F]">Safari</span>
+</div>
+<span class="text-xs font-medium text-[#6E6E73]">420 MB</span>
+</div>
+<div class="py-2 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<input checked="" class="w-4 h-4 rounded text-[#007AFF] border-[#D2D2D7] focus:ring-[#007AFF]" type="checkbox"/>
+<span class="text-sm text-[#1D1D1F]">Spotify</span>
+</div>
+<span class="text-xs font-medium text-[#6E6E73]">380 MB</span>
+</div>
+<div class="py-2 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<input checked="" class="w-4 h-4 rounded text-[#007AFF] border-[#D2D2D7] focus:ring-[#007AFF]" type="checkbox"/>
+<span class="text-sm text-[#1D1D1F]">Figma Desktop</span>
+</div>
+<span class="text-xs font-medium text-[#6E6E73]">1.3 GB</span>
+</div>
+</div>
+</div>
+<!-- Row: System Logs -->
+<div class="border border-[#D2D2D7] rounded-xl overflow-hidden hover:bg-surface-container-lowest transition-colors">
+<div class="p-4 flex items-center justify-between cursor-pointer">
+<div class="flex items-center gap-4">
+<input checked="" class="w-4 h-4 rounded text-[#007AFF] border-[#D2D2D7] focus:ring-[#007AFF]" type="checkbox"/>
+<span class="material-symbols-outlined text-[#6E6E73]">article</span>
+<div>
+<h3 class="font-semibold text-sm text-[#1D1D1F]">System Logs</h3>
+<p class="text-xs text-[#6E6E73]">Diagnostic data and system event logs</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-sm font-bold text-[#1D1D1F]">890 MB</span>
+<span class="material-symbols-outlined text-[#6E6E73]">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Row: Trash -->
+<div class="border border-[#D2D2D7] rounded-xl overflow-hidden hover:bg-surface-container-lowest transition-colors">
+<div class="p-4 flex items-center justify-between cursor-pointer">
+<div class="flex items-center gap-4">
+<input checked="" class="w-4 h-4 rounded text-[#007AFF] border-[#D2D2D7] focus:ring-[#007AFF]" type="checkbox"/>
+<span class="material-symbols-outlined text-[#6E6E73]">delete</span>
+<div>
+<h3 class="font-semibold text-sm text-[#1D1D1F]">Trash</h3>
+<p class="text-xs text-[#6E6E73]">8 items currently in your trash bin</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-sm font-bold text-[#1D1D1F]">612 MB</span>
+<span class="material-symbols-outlined text-[#6E6E73]">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Row: Temp Files -->
+<div class="border border-[#D2D2D7] rounded-xl overflow-hidden hover:bg-surface-container-lowest transition-colors">
+<div class="p-4 flex items-center justify-between cursor-pointer">
+<div class="flex items-center gap-4">
+<input class="w-4 h-4 rounded text-[#007AFF] border-[#D2D2D7] focus:ring-[#007AFF]" type="checkbox"/>
+<span class="material-symbols-outlined text-[#6E6E73]">timer</span>
+<div>
+<h3 class="font-semibold text-sm text-[#1D1D1F]">Temp Files</h3>
+<p class="text-xs text-[#6E6E73]">Temporary installation and runtime files</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-sm font-bold text-[#1D1D1F]">280 MB</span>
+<span class="material-symbols-outlined text-[#6E6E73]">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Visual Info Card -->
+<div class="relative rounded-2xl h-48 overflow-hidden apple-shadow">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="clean minimal server room with blue LED lights and futuristic atmosphere professional data center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfzYUz-X24tKKkED499e6dTtyuSvyb6eZeN4RKH5HafIs1Q4RLOBiUs1pquJ3VJBmVxB9ioFyKhU495-1kC8_FWR5X5zDIUZqA5V8HwlwJt0FHmABz0zMP9gl18BjzJn_tU6ypHMZvsuxyWY1ZSOTyLx6lb5iMnkXII5NGo1B7UzFLe8abGRoueQ4iTns_bua390r1UdxrLtpUB-THCgt6btp5_6rHRATinzvtf0yeSjkRSGw1VXWNxGB30yoN3jDdXyeOVb80GTw"/>
+<div class="absolute inset-0 bg-gradient-to-r from-[#1D1D1F]/90 to-transparent flex items-center px-8">
+<div class="max-w-md">
+<h4 class="text-white text-xl font-bold mb-2">Deep Scan Complete</h4>
+<p class="text-white/80 text-sm">Our intelligent engine has identified 3.8 GB of safe-to-remove data to improve your system's stability.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Sticky Toolbar -->
+<footer class="h-20 bg-white border-t border-[#D2D2D7] flex items-center justify-between px-8">
+<div class="flex items-center gap-3">
+<div class="p-2 bg-[#E8F3FF] rounded-lg">
+<span class="material-symbols-outlined text-[#007AFF]" style="font-variation-settings: 'FILL' 1;">info</span>
+</div>
+<div>
+<p class="text-sm font-semibold text-[#1D1D1F]">3 of 4 categories selected</p>
+<p class="text-xs text-[#6E6E73]">3.6 GB will be freed</p>
+</div>
+</div>
+<button class="bg-[#007AFF] hover:bg-[#005bc2] text-white font-bold px-8 py-3 rounded-xl transition-all shadow-lg shadow-blue-500/20 active:scale-95">
+                Clean Selected
+            </button>
+</footer>
+</main>
+</body></html>

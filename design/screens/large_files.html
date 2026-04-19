@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-dim": "#0050ab",
+                    "primary-fixed-dim": "#006ee6",
+                    "on-primary-container": "#000000",
+                    "tertiary": "#685781",
+                    "secondary-fixed": "#dae2f9",
+                    "on-surface": "#2e3336",
+                    "tertiary-fixed": "#e4ceff",
+                    "inverse-primary": "#4b8eff",
+                    "surface-dim": "#d7dadf",
+                    "surface": "#f9f9fb",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed-variant": "#535b6e",
+                    "on-secondary-fixed": "#373f51",
+                    "error-dim": "#67040d",
+                    "tertiary-fixed-dim": "#d6c1f0",
+                    "on-secondary-container": "#4a5264",
+                    "surface-container": "#eceef1",
+                    "surface-bright": "#f9f9fb",
+                    "outline": "#777b7f",
+                    "on-tertiary-fixed-variant": "#5d4d75",
+                    "on-secondary": "#f9f8ff",
+                    "on-error-container": "#6e0a12",
+                    "surface-container-high": "#e6e8ec",
+                    "on-primary-fixed-variant": "#f8f8ff",
+                    "background": "#f9f9fb",
+                    "on-tertiary-fixed": "#403157",
+                    "secondary-dim": "#4b5366",
+                    "primary-container": "#007aff",
+                    "surface-container-low": "#f2f4f6",
+                    "tertiary-dim": "#5c4b74",
+                    "inverse-on-surface": "#9c9d9f",
+                    "on-tertiary-container": "#54436b",
+                    "on-error": "#fff7f6",
+                    "on-background": "#2e3336",
+                    "inverse-surface": "#0c0e10",
+                    "primary": "#005bc2",
+                    "surface-container-highest": "#dfe3e7",
+                    "tertiary-container": "#e4ceff",
+                    "on-primary-fixed": "#ffffff",
+                    "error-container": "#fa746f",
+                    "secondary-container": "#dae2f9",
+                    "on-surface-variant": "#5b6063",
+                    "primary-fixed": "#007aff",
+                    "secondary": "#575f72",
+                    "surface-variant": "#dfe3e7",
+                    "error": "#a83836",
+                    "surface-tint": "#005bc2",
+                    "secondary-fixed-dim": "#ccd4eb",
+                    "outline-variant": "#aeb2b6",
+                    "on-tertiary": "#fef7ff",
+                    "on-primary": "#f9f8ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #f9f9fb; }
+        .material-symbols-outlined { font-size: 20px; vertical-align: middle; }
+        .sidebar-active { background-color: #E8F3FF; color: #007AFF; }
+        .table-row-alt:nth-child(even) { background-color: #FAFAFA; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="flex h-screen overflow-hidden text-on-surface">
+<!-- SideNavBar (from Shared Components JSON) -->
+<aside class="fixed left-0 top-0 h-full flex flex-col py-6 w-[220px] bg-[#F5F5F7] border-r border-[#D2D2D7] z-50">
+<div class="px-6 mb-8 flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center text-white">
+<span class="material-symbols-outlined" data-icon="cleaning_services">cleaning_services</span>
+</div>
+<span class="text-lg font-bold text-[#1D1D1F]">ClearFile</span>
+</div>
+<nav class="flex-1 px-3 space-y-1 overflow-y-auto no-scrollbar">
+<a class="flex items-center gap-3 px-3 py-2 text-[#6E6E73] font-sans text-sm font-medium hover:bg-[#E8E8ED] transition-colors duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                Overview
+            </a>
+<a class="flex items-center gap-3 px-3 py-2 text-[#6E6E73] font-sans text-sm font-medium hover:bg-[#E8E8ED] transition-colors duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+                System Junk
+            </a>
+<!-- Active Navigation: Large Files -->
+<a class="flex items-center gap-3 px-3 py-2 bg-[#E8F3FF] text-[#007AFF] font-sans text-sm font-medium rounded-lg transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="folder_zip">folder_zip</span>
+                Large Files
+            </a>
+<a class="flex items-center gap-3 px-3 py-2 text-[#6E6E73] font-sans text-sm font-medium hover:bg-[#E8E8ED] transition-colors duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="content_copy">content_copy</span>
+                Duplicates
+            </a>
+<a class="flex items-center gap-3 px-3 py-2 text-[#6E6E73] font-sans text-sm font-medium hover:bg-[#E8E8ED] transition-colors duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="apps">apps</span>
+                App Uninstaller
+            </a>
+<a class="flex items-center gap-3 px-3 py-2 text-[#6E6E73] font-sans text-sm font-medium hover:bg-[#E8E8ED] transition-colors duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="terminal">terminal</span>
+                Developer Tools
+            </a>
+<a class="flex items-center gap-3 px-3 py-2 text-[#6E6E73] font-sans text-sm font-medium hover:bg-[#E8E8ED] transition-colors duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="assessment">assessment</span>
+                Clean Report
+            </a>
+</nav>
+<div class="px-6 pt-6 mt-auto border-t border-[#D2D2D7]">
+<div class="flex items-center gap-3">
+<div class="flex-1 h-1.5 bg-[#E8E8ED] rounded-full overflow-hidden">
+<div class="w-[65%] h-full bg-primary-fixed"></div>
+</div>
+</div>
+<p class="text-[10px] text-[#6E6E73] mt-2 font-medium">65.2 GB of 128 GB used</p>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-[220px] flex-1 flex flex-col min-h-screen bg-white">
+<!-- TopAppBar (from Shared Components JSON) -->
+<header class="flex items-center justify-between w-full h-12 px-6 sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-[#D2D2D7]">
+<div class="flex items-center gap-2">
+<h1 class="text-base font-semibold text-[#1D1D1F]">Large Files</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-[#6E6E73] hover:text-[#1D1D1F]">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button class="text-[#6E6E73] hover:text-[#1D1D1F]">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+</div>
+</header>
+<!-- Subheader with Filters -->
+<section class="px-8 py-6 border-b border-[#D2D2D7] bg-surface-container-low">
+<div class="flex items-center justify-between">
+<div class="flex gap-2">
+<button class="px-4 py-1.5 text-sm font-medium rounded-full bg-white text-on-surface border border-[#D2D2D7] hover:bg-surface-container-highest transition-colors">All</button>
+<button class="px-4 py-1.5 text-sm font-medium rounded-full bg-primary-fixed text-white border border-transparent shadow-sm">&gt;100MB</button>
+<button class="px-4 py-1.5 text-sm font-medium rounded-full bg-white text-on-surface border border-[#D2D2D7] hover:bg-surface-container-highest transition-colors">&gt;500MB</button>
+<button class="px-4 py-1.5 text-sm font-medium rounded-full bg-white text-on-surface border border-[#D2D2D7] hover:bg-surface-container-highest transition-colors">&gt;1GB</button>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-xs text-on-surface-variant font-medium">Sorted by: Size</span>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer" data-icon="filter_list">filter_list</span>
+</div>
+</div>
+</section>
+<!-- Content Table Area -->
+<section class="flex-1 overflow-auto">
+<table class="w-full text-left border-collapse">
+<thead class="sticky top-0 bg-white z-10">
+<tr class="border-b border-[#D2D2D7]">
+<th class="px-6 py-3 w-12"><input class="rounded border-[#D2D2D7] text-primary-fixed focus:ring-primary-fixed" type="checkbox"/></th>
+<th class="px-4 py-3 text-xs font-semibold text-[#6E6E73] uppercase tracking-wider">Name</th>
+<th class="px-4 py-3 text-xs font-semibold text-[#6E6E73] uppercase tracking-wider">Path</th>
+<th class="px-4 py-3 text-xs font-semibold text-[#6E6E73] uppercase tracking-wider">Size</th>
+<th class="px-4 py-3 text-xs font-semibold text-[#6E6E73] uppercase tracking-wider">Modified</th>
+<th class="px-4 py-3 text-xs font-semibold text-[#6E6E73] uppercase tracking-wider text-right">Action</th>
+</tr>
+</thead>
+<tbody class="text-sm">
+<!-- Row 1 -->
+<tr class="table-row-alt hover:bg-surface-container-low transition-colors">
+<td class="px-6 py-4"><input checked="" class="rounded border-[#D2D2D7] text-primary-fixed focus:ring-primary-fixed" type="checkbox"/></td>
+<td class="px-4 py-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#FF3B30]" data-icon="video_library" data-weight="fill" style="font-variation-settings: 'FILL' 1;">video_library</span>
+<span class="font-medium text-[#1D1D1F]">Final Cut Pro Library</span>
+</div>
+</td>
+<td class="px-4 py-4 text-[#6E6E73]">~/Movies/Work/</td>
+<td class="px-4 py-4 font-semibold text-[#1D1D1F]">18.2GB</td>
+<td class="px-4 py-4 text-[#6E6E73]">Today, 10:45 AM</td>
+<td class="px-4 py-4 text-right">
+<div class="flex justify-end gap-2">
+<button class="p-1.5 text-on-surface-variant hover:bg-surface-container-highest rounded-lg transition-colors">
+<span class="material-symbols-outlined" data-icon="open_in_new">open_in_new</span>
+</button>
+<button class="p-1.5 text-[#FF3B30] hover:bg-error/10 rounded-lg transition-colors">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="table-row-alt hover:bg-surface-container-low transition-colors">
+<td class="px-6 py-4"><input checked="" class="rounded border-[#D2D2D7] text-primary-fixed focus:ring-primary-fixed" type="checkbox"/></td>
+<td class="px-4 py-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#007AFF]" data-icon="developer_board">developer_board</span>
+<span class="font-medium text-[#1D1D1F]">iOS Simulator Runtime</span>
+</div>
+</td>
+<td class="px-4 py-4 text-[#6E6E73]">~/Library/Developer/</td>
+<td class="px-4 py-4 font-semibold text-[#1D1D1F]">12.4GB</td>
+<td class="px-4 py-4 text-[#6E6E73]">Dec 12, 2023</td>
+<td class="px-4 py-4 text-right">
+<div class="flex justify-end gap-2">
+<button class="p-1.5 text-on-surface-variant hover:bg-surface-container-highest rounded-lg transition-colors">
+<span class="material-symbols-outlined" data-icon="open_in_new">open_in_new</span>
+</button>
+<button class="p-1.5 text-[#FF3B30] hover:bg-error/10 rounded-lg transition-colors">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="table-row-alt hover:bg-surface-container-low transition-colors">
+<td class="px-6 py-4"><input checked="" class="rounded border-[#D2D2D7] text-primary-fixed focus:ring-primary-fixed" type="checkbox"/></td>
+<td class="px-4 py-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" data-icon="database">database</span>
+<span class="font-medium text-[#1D1D1F]">Parallels Desktop VM</span>
+</div>
+</td>
+<td class="px-4 py-4 text-[#6E6E73]">~/Documents/VMs/</td>
+<td class="px-4 py-4 font-semibold text-[#1D1D1F]">8.7GB</td>
+<td class="px-4 py-4 text-[#6E6E73]">Yesterday, 4:20 PM</td>
+<td class="px-4 py-4 text-right">
+<div class="flex justify-end gap-2">
+<button class="p-1.5 text-on-surface-variant hover:bg-surface-container-highest rounded-lg transition-colors">
+<span class="material-symbols-outlined" data-icon="open_in_new">open_in_new</span>
+</button>
+<button class="p-1.5 text-[#FF3B30] hover:bg-error/10 rounded-lg transition-colors">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="table-row-alt hover:bg-surface-container-low transition-colors">
+<td class="px-6 py-4"><input checked="" class="rounded border-[#D2D2D7] text-primary-fixed focus:ring-primary-fixed" type="checkbox"/></td>
+<td class="px-4 py-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary" data-icon="archive">archive</span>
+<span class="font-medium text-[#1D1D1F]">Archive_Backup_2023.zip</span>
+</div>
+</td>
+<td class="px-4 py-4 text-[#6E6E73]">~/Downloads/</td>
+<td class="px-4 py-4 font-semibold text-[#1D1D1F]">4.1GB</td>
+<td class="px-4 py-4 text-[#6E6E73]">Nov 20, 2023</td>
+<td class="px-4 py-4 text-right">
+<div class="flex justify-end gap-2">
+<button class="p-1.5 text-on-surface-variant hover:bg-surface-container-highest rounded-lg transition-colors">
+<span class="material-symbols-outlined" data-icon="open_in_new">open_in_new</span>
+</button>
+<button class="p-1.5 text-[#FF3B30] hover:bg-error/10 rounded-lg transition-colors">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="table-row-alt hover:bg-surface-container-low transition-colors">
+<td class="px-6 py-4"><input class="rounded border-[#D2D2D7] text-primary-fixed focus:ring-primary-fixed" type="checkbox"/></td>
+<td class="px-4 py-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-warning" data-icon="settings_system_daydream">settings_system_daydream</span>
+<span class="font-medium text-[#1D1D1F]">Android Studio Installer</span>
+</div>
+</td>
+<td class="px-4 py-4 text-[#6E6E73]">~/Downloads/</td>
+<td class="px-4 py-4 font-semibold text-[#1D1D1F]">1.8GB</td>
+<td class="px-4 py-4 text-[#6E6E73]">Oct 15, 2023</td>
+<td class="px-4 py-4 text-right">
+<div class="flex justify-end gap-2">
+<button class="p-1.5 text-on-surface-variant hover:bg-surface-container-highest rounded-lg transition-colors">
+<span class="material-symbols-outlined" data-icon="open_in_new">open_in_new</span>
+</button>
+<button class="p-1.5 text-[#FF3B30] hover:bg-error/10 rounded-lg transition-colors">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6 -->
+<tr class="table-row-alt hover:bg-surface-container-low transition-colors">
+<td class="px-6 py-4"><input class="rounded border-[#D2D2D7] text-primary-fixed focus:ring-primary-fixed" type="checkbox"/></td>
+<td class="px-4 py-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-success" data-icon="description">description</span>
+<span class="font-medium text-[#1D1D1F]">Dataset_Final_v2.csv</span>
+</div>
+</td>
+<td class="px-4 py-4 text-[#6E6E73]">~/Projects/Data/</td>
+<td class="px-4 py-4 font-semibold text-[#1D1D1F]">840MB</td>
+<td class="px-4 py-4 text-[#6E6E73]">Sep 30, 2023</td>
+<td class="px-4 py-4 text-right">
+<div class="flex justify-end gap-2">
+<button class="p-1.5 text-on-surface-variant hover:bg-surface-container-highest rounded-lg transition-colors">
+<span class="material-symbols-outlined" data-icon="open_in_new">open_in_new</span>
+</button>
+<button class="p-1.5 text-[#FF3B30] hover:bg-error/10 rounded-lg transition-colors">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 7 -->
+<tr class="table-row-alt hover:bg-surface-container-low transition-colors">
+<td class="px-6 py-4"><input class="rounded border-[#D2D2D7] text-primary-fixed focus:ring-primary-fixed" type="checkbox"/></td>
+<td class="px-4 py-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#007AFF]" data-icon="image">image</span>
+<span class="font-medium text-[#1D1D1F]">HighRes_Assets.pkg</span>
+</div>
+</td>
+<td class="px-4 py-4 text-[#6E6E73]">~/Design/Resources/</td>
+<td class="px-4 py-4 font-semibold text-[#1D1D1F]">620MB</td>
+<td class="px-4 py-4 text-[#6E6E73]">Sep 12, 2023</td>
+<td class="px-4 py-4 text-right">
+<div class="flex justify-end gap-2">
+<button class="p-1.5 text-on-surface-variant hover:bg-surface-container-highest rounded-lg transition-colors">
+<span class="material-symbols-outlined" data-icon="open_in_new">open_in_new</span>
+</button>
+<button class="p-1.5 text-[#FF3B30] hover:bg-error/10 rounded-lg transition-colors">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 8 -->
+<tr class="table-row-alt hover:bg-surface-container-low transition-colors">
+<td class="px-6 py-4"><input class="rounded border-[#D2D2D7] text-primary-fixed focus:ring-primary-fixed" type="checkbox"/></td>
+<td class="px-4 py-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary" data-icon="folder">folder</span>
+<span class="font-medium text-[#1D1D1F]">Node_Modules_Backup</span>
+</div>
+</td>
+<td class="px-4 py-4 text-[#6E6E73]">~/Desktop/Temp/</td>
+<td class="px-4 py-4 font-semibold text-[#1D1D1F]">450MB</td>
+<td class="px-4 py-4 text-[#6E6E73]">Aug 05, 2023</td>
+<td class="px-4 py-4 text-right">
+<div class="flex justify-end gap-2">
+<button class="p-1.5 text-on-surface-variant hover:bg-surface-container-highest rounded-lg transition-colors">
+<span class="material-symbols-outlined" data-icon="open_in_new">open_in_new</span>
+</button>
+<button class="p-1.5 text-[#FF3B30] hover:bg-error/10 rounded-lg transition-colors">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<!-- Bottom Action Bar -->
+<footer class="h-20 border-t border-[#D2D2D7] bg-white px-8 flex items-center justify-between z-40">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded bg-primary-container/10 flex items-center justify-center text-primary-fixed">
+<span class="material-symbols-outlined" style="font-size: 16px;">info</span>
+</div>
+<span class="text-sm font-medium text-[#1D1D1F]">4 files selected · <span class="text-primary-fixed">23.1 GB</span></span>
+</div>
+<div class="flex items-center gap-4">
+<button class="px-6 py-2 text-sm font-semibold text-on-surface hover:bg-surface-container-high rounded-lg transition-all">
+                    Show in Finder
+                </button>
+<button class="px-8 py-2 text-sm font-bold text-white bg-[#FF3B30] hover:bg-error-dim rounded-lg shadow-md transition-all">
+                    Move to Trash
+                </button>
+</div>
+</footer>
+</main>
+<!-- Global Image Styles and Logic -->
+<style>
+        img { object-fit: cover; }
+    </style>
+</body></html>

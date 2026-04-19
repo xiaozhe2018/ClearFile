@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-dim": "#0050ab",
+                        "primary-fixed-dim": "#006ee6",
+                        "on-primary-container": "#000000",
+                        "tertiary": "#685781",
+                        "secondary-fixed": "#dae2f9",
+                        "on-surface": "#2e3336",
+                        "tertiary-fixed": "#e4ceff",
+                        "inverse-primary": "#4b8eff",
+                        "surface-dim": "#d7dadf",
+                        "surface": "#f9f9fb",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed-variant": "#535b6e",
+                        "on-secondary-fixed": "#373f51",
+                        "error-dim": "#67040d",
+                        "tertiary-fixed-dim": "#d6c1f0",
+                        "on-secondary-container": "#4a5264",
+                        "surface-container": "#eceef1",
+                        "surface-bright": "#f9f9fb",
+                        "outline": "#777b7f",
+                        "on-tertiary-fixed-variant": "#5d4d75",
+                        "on-secondary": "#f9f8ff",
+                        "on-error-container": "#6e0a12",
+                        "surface-container-high": "#e6e8ec",
+                        "on-primary-fixed-variant": "#f8f8ff",
+                        "background": "#f9f9fb",
+                        "on-tertiary-fixed": "#403157",
+                        "secondary-dim": "#4b5366",
+                        "primary-container": "#007aff",
+                        "surface-container-low": "#f2f4f6",
+                        "tertiary-dim": "#5c4b74",
+                        "inverse-on-surface": "#9c9d9f",
+                        "on-tertiary-container": "#54436b",
+                        "on-error": "#fff7f6",
+                        "on-background": "#2e3336",
+                        "inverse-surface": "#0c0e10",
+                        "primary": "#005bc2",
+                        "surface-container-highest": "#dfe3e7",
+                        "tertiary-container": "#e4ceff",
+                        "on-primary-fixed": "#ffffff",
+                        "error-container": "#fa746f",
+                        "secondary-container": "#dae2f9",
+                        "on-surface-variant": "#5b6063",
+                        "primary-fixed": "#007aff",
+                        "secondary": "#575f72",
+                        "surface-variant": "#dfe3e7",
+                        "error": "#a83836",
+                        "surface-tint": "#005bc2",
+                        "secondary-fixed-dim": "#ccd4eb",
+                        "outline-variant": "#aeb2b6",
+                        "on-tertiary": "#fef7ff",
+                        "on-primary": "#f9f8ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased overflow-hidden">
+<div class="flex h-screen w-screen max-w-[1100px] max-h-[720px] mx-auto overflow-hidden bg-white shadow-2xl ring-1 ring-black/5 rounded-xl my-auto">
+<!-- SideNavBar -->
+<aside class="w-[220px] h-full flex flex-col py-6 bg-[#F5F5F7] dark:bg-gray-800 border-r border-[#D2D2D7] dark:border-gray-700 fixed left-0 top-0">
+<div class="px-6 mb-8 flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-lg" style="font-variation-settings: 'FILL' 1;">cleaning_services</span>
+</div>
+<span class="text-lg font-bold text-[#1D1D1F] dark:text-gray-100 Inter">ClearFile</span>
+</div>
+<nav class="flex-1 px-3 space-y-1 overflow-y-auto">
+<!-- Overview: Active -->
+<a class="flex items-center gap-3 px-3 py-2 bg-[#E8F3FF] dark:bg-blue-900/30 text-[#007AFF] dark:text-blue-400 rounded-lg font-sans text-sm font-medium Inter transition-colors duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                    Overview
+                </a>
+<a class="flex items-center gap-3 px-3 py-2 text-[#6E6E73] dark:text-gray-400 hover:bg-[#E8E8ED] dark:hover:bg-gray-700/50 rounded-lg font-sans text-sm font-medium Inter transition-colors duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+                    System Junk
+                </a>
+<a class="flex items-center gap-3 px-3 py-2 text-[#6E6E73] dark:text-gray-400 hover:bg-[#E8E8ED] dark:hover:bg-gray-700/50 rounded-lg font-sans text-sm font-medium Inter transition-colors duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="folder_zip">folder_zip</span>
+                    Large Files
+                </a>
+<a class="flex items-center gap-3 px-3 py-2 text-[#6E6E73] dark:text-gray-400 hover:bg-[#E8E8ED] dark:hover:bg-gray-700/50 rounded-lg font-sans text-sm font-medium Inter transition-colors duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="content_copy">content_copy</span>
+                    Duplicates
+                </a>
+<a class="flex items-center gap-3 px-3 py-2 text-[#6E6E73] dark:text-gray-400 hover:bg-[#E8E8ED] dark:hover:bg-gray-700/50 rounded-lg font-sans text-sm font-medium Inter transition-colors duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="apps">apps</span>
+                    App Uninstaller
+                </a>
+<a class="flex items-center gap-3 px-3 py-2 text-[#6E6E73] dark:text-gray-400 hover:bg-[#E8E8ED] dark:hover:bg-gray-700/50 rounded-lg font-sans text-sm font-medium Inter transition-colors duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="terminal">terminal</span>
+                    Developer Tools
+                </a>
+<a class="flex items-center gap-3 px-3 py-2 text-[#6E6E73] dark:text-gray-400 hover:bg-[#E8E8ED] dark:hover:bg-gray-700/50 rounded-lg font-sans text-sm font-medium Inter transition-colors duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="assessment">assessment</span>
+                    Clean Report
+                </a>
+</nav>
+<div class="px-6 mt-auto pt-6 border-t border-[#D2D2D7] dark:border-gray-700">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest overflow-hidden">
+<img alt="App Logo" class="w-full h-full object-cover" data-alt="minimal circular profile placeholder with abstract soft color pattern" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtzeY19QpitiKZ7z6O5_QV__IZwMYBrk5Rewu3JaCn1hpwX8ZQCaHD9LraeO1ng3m9bU1lmbLmMPsfomEEhDbNsN4EjdpnV_WSiz73lHsAtj5nHBwgycx9ae4fX-E5vdEn0YVT4l9LgpgxoGB35y8VWhw2OtaVNjGg1V4gpQifi6vzYNxshf0z1s5UrWfg-i1ogb04e6vc_q4ht_b-9RDQ_qM_6reHkPgS9_fWexYkxX6pko0Wlmg8a5mAmJvssXTTdB46Uen7mmI"/>
+</div>
+<div class="flex flex-col">
+<span class="text-xs font-semibold text-on-surface">Pro Version</span>
+<span class="text-[10px] text-on-surface-variant">Active Subscription</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 ml-[220px] bg-white flex flex-col h-full overflow-y-auto">
+<!-- TopAppBar -->
+<header class="flex items-center justify-between w-full h-12 px-8 sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#6E6E73] cursor-pointer">chevron_left</span>
+<span class="material-symbols-outlined text-[#D2D2D7] cursor-not-allowed">chevron_right</span>
+</div>
+<div class="text-base font-semibold text-[#1D1D1F] dark:text-gray-100 Inter">Overview</div>
+<div class="w-20"></div> <!-- Spacer for balance -->
+</header>
+<div class="px-8 py-6 max-w-4xl mx-auto w-full">
+<!-- Header -->
+<div class="mb-10 text-center">
+<h1 class="text-[20px] font-semibold text-[#1D1D1F] mb-1">Your Mac</h1>
+<p class="text-sm text-[#6E6E73]">256 GB SSD · Last scanned: Today 14:32</p>
+</div>
+<!-- Donut Chart & Legend Section -->
+<div class="flex flex-col items-center justify-center gap-12 mb-12">
+<!-- Chart Centerpiece -->
+<div class="relative flex items-center justify-center">
+<div class="w-[180px] h-[180px] rounded-full flex items-center justify-center relative overflow-hidden">
+<!-- Donut Segments (SVG Representation) -->
+<svg class="w-full h-full -rotate-90" viewbox="0 0 100 100">
+<!-- Background Circle (Free Space) -->
+<circle cx="50" cy="50" fill="transparent" r="40" stroke="#E8E8ED" stroke-width="12"></circle>
+<!-- Progress Segments (Approximate visuals for 68% total used) -->
+<circle cx="50" cy="50" fill="transparent" r="40" stroke="#007AFF" stroke-dasharray="170 251" stroke-width="12"></circle>
+<circle cx="50" cy="50" fill="transparent" r="40" stroke="#34C759" stroke-dasharray="100 251" stroke-dashoffset="-170" stroke-width="12"></circle>
+<circle cx="50" cy="50" fill="transparent" r="40" stroke="#FF9500" stroke-dasharray="40 251" stroke-dashoffset="-270" stroke-width="12"></circle>
+</svg>
+<!-- Inner Content -->
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="text-3xl font-bold text-[#1D1D1F]">68%</span>
+<span class="text-[10px] uppercase tracking-wider font-semibold text-[#6E6E73]">Used</span>
+</div>
+</div>
+</div>
+<!-- Legend Items Grid -->
+<div class="grid grid-cols-2 md:grid-cols-5 gap-6 w-full max-w-3xl">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-blue-500"></span>
+<div>
+<p class="text-xs font-semibold text-[#1D1D1F]">System</p>
+<p class="text-[10px] text-[#6E6E73]">12GB</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-green-500"></span>
+<div>
+<p class="text-xs font-semibold text-[#1D1D1F]">Apps</p>
+<p class="text-[10px] text-[#6E6E73]">45GB</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-yellow-500"></span>
+<div>
+<p class="text-xs font-semibold text-[#1D1D1F]">Documents</p>
+<p class="text-[10px] text-[#6E6E73]">28GB</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-purple-500"></span>
+<div>
+<p class="text-xs font-semibold text-[#1D1D1F]">Caches</p>
+<p class="text-[10px] text-[#6E6E73]">18GB</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-gray-400"></span>
+<div>
+<p class="text-xs font-semibold text-[#1D1D1F]">Other</p>
+<p class="text-[10px] text-[#6E6E73]">31GB</p>
+</div>
+</div>
+</div>
+</div>
+<!-- CTA -->
+<div class="flex justify-center mb-16">
+<button class="w-[280px] h-[44px] bg-[#007AFF] hover:bg-primary text-white font-semibold rounded-lg shadow-sm transition-all duration-200 active:scale-95 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                        Start Full Scan
+                    </button>
+</div>
+<!-- Bento-style Summary Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<!-- Last Cleaned -->
+<div class="p-5 bg-[#F5F5F7] dark:bg-gray-800 rounded-xl border border-black/5 flex flex-col justify-between group hover:shadow-md transition-shadow">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-white dark:bg-gray-700 rounded-lg">
+<span class="material-symbols-outlined text-[#34C759]" data-icon="history">history</span>
+</div>
+<span class="text-[10px] font-bold text-green-600 bg-green-50 px-2 py-1 rounded-full">ACTIVE</span>
+</div>
+<div>
+<p class="text-xs text-[#6E6E73] font-medium mb-1">Last Cleaned</p>
+<p class="text-sm font-semibold text-[#1D1D1F]">3 days ago</p>
+<div class="mt-3 flex items-center gap-2">
+<div class="h-1 flex-1 bg-[#E8E8ED] rounded-full overflow-hidden">
+<div class="h-full bg-[#34C759] w-3/4"></div>
+</div>
+<span class="text-[10px] text-[#6E6E73]">2.3 GB freed</span>
+</div>
+</div>
+</div>
+<!-- Largest File -->
+<div class="p-5 bg-[#F5F5F7] dark:bg-gray-800 rounded-xl border border-black/5 flex flex-col justify-between group hover:shadow-md transition-shadow">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-white dark:bg-gray-700 rounded-lg">
+<span class="material-symbols-outlined text-[#007AFF]" data-icon="database">database</span>
+</div>
+</div>
+<div>
+<p class="text-xs text-[#6E6E73] font-medium mb-1">Largest File</p>
+<p class="text-sm font-semibold text-[#1D1D1F] line-clamp-1">Final Cut Pro Library</p>
+<div class="mt-3 flex items-center justify-between">
+<span class="text-[10px] font-bold text-[#007AFF]">18.2 GB</span>
+<span class="material-symbols-outlined text-xs text-[#6E6E73]">open_in_new</span>
+</div>
+</div>
+</div>
+<!-- Duplicates Found -->
+<div class="p-5 bg-[#F5F5F7] dark:bg-gray-800 rounded-xl border border-black/5 flex flex-col justify-between group hover:shadow-md transition-shadow">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-white dark:bg-gray-700 rounded-lg">
+<span class="material-symbols-outlined text-[#FF9500]" data-icon="content_copy">content_copy</span>
+</div>
+</div>
+<div>
+<p class="text-xs text-[#6E6E73] font-medium mb-1">Duplicates Found</p>
+<p class="text-sm font-semibold text-[#1D1D1F]">147 files</p>
+<div class="mt-3 flex items-center justify-between">
+<span class="text-[10px] font-bold text-[#FF9500]">4.1 GB wasting space</span>
+<span class="material-symbols-outlined text-xs text-[#6E6E73]">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Additional Decorative Background -->
+<div class="mt-12 p-8 rounded-2xl bg-gradient-to-br from-[#007AFF]/5 to-[#E8F3FF] border border-[#007AFF]/10 flex items-center justify-between">
+<div class="max-w-md">
+<h3 class="text-sm font-bold text-[#1D1D1F] mb-1">Pro Tip: Optimize Storage</h3>
+<p class="text-xs text-[#6E6E73] leading-relaxed">Regularly clearing your developer caches and temporary system junk can improve app launch times by up to 15%.</p>
+</div>
+<div class="w-24 h-24 relative opacity-40">
+<span class="material-symbols-outlined text-[64px] text-[#007AFF] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" style="font-variation-settings: 'FILL' 1;">rocket_launch</span>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

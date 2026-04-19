@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ClearFile - Clean Report</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-dim": "#0050ab",
+                    "primary-fixed-dim": "#006ee6",
+                    "on-primary-container": "#000000",
+                    "tertiary": "#685781",
+                    "secondary-fixed": "#dae2f9",
+                    "on-surface": "#2e3336",
+                    "tertiary-fixed": "#e4ceff",
+                    "inverse-primary": "#4b8eff",
+                    "surface-dim": "#d7dadf",
+                    "surface": "#f9f9fb",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed-variant": "#535b6e",
+                    "on-secondary-fixed": "#373f51",
+                    "error-dim": "#67040d",
+                    "tertiary-fixed-dim": "#d6c1f0",
+                    "on-secondary-container": "#4a5264",
+                    "surface-container": "#eceef1",
+                    "surface-bright": "#f9f9fb",
+                    "outline": "#777b7f",
+                    "on-tertiary-fixed-variant": "#5d4d75",
+                    "on-secondary": "#f9f8ff",
+                    "on-error-container": "#6e0a12",
+                    "surface-container-high": "#e6e8ec",
+                    "on-primary-fixed-variant": "#f8f8ff",
+                    "background": "#f9f9fb",
+                    "on-tertiary-fixed": "#403157",
+                    "secondary-dim": "#4b5366",
+                    "primary-container": "#007aff",
+                    "surface-container-low": "#f2f4f6",
+                    "tertiary-dim": "#5c4b74",
+                    "inverse-on-surface": "#9c9d9f",
+                    "on-tertiary-container": "#54436b",
+                    "on-error": "#fff7f6",
+                    "on-background": "#2e3336",
+                    "inverse-surface": "#0c0e10",
+                    "primary": "#005bc2",
+                    "surface-container-highest": "#dfe3e7",
+                    "tertiary-container": "#e4ceff",
+                    "on-primary-fixed": "#ffffff",
+                    "error-container": "#fa746f",
+                    "secondary-container": "#dae2f9",
+                    "on-surface-variant": "#5b6063",
+                    "primary-fixed": "#007aff",
+                    "secondary": "#575f72",
+                    "surface-variant": "#dfe3e7",
+                    "error": "#a83836",
+                    "surface-tint": "#005bc2",
+                    "secondary-fixed-dim": "#ccd4eb",
+                    "outline-variant": "#aeb2b6",
+                    "on-tertiary": "#fef7ff",
+                    "on-primary": "#f9f8ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .donut-chart {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background: conic-gradient(
+                #007AFF 0% 43.4%, 
+                #34C759 43.4% 81.9%, 
+                #FF9500 81.9% 100%
+            );
+            position: relative;
+        }
+        .donut-chart::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            background: #FFFFFF;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body class="bg-surface-container-lowest text-on-surface antialiased overflow-hidden">
+<div class="flex h-screen w-full max-w-[1100px] mx-auto overflow-hidden bg-white shadow-2xl">
+<!-- SideNavBar -->
+<aside class="w-[220px] h-full bg-[#F5F5F7] border-r border-[#D2D2D7] flex flex-col py-6">
+<div class="px-6 mb-8 flex items-center gap-2">
+<div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-xl" data-icon="cleaning_services">cleaning_services</span>
+</div>
+<span class="text-lg font-bold text-[#1D1D1F]">ClearFile</span>
+</div>
+<nav class="flex-1 px-3 space-y-1">
+<a class="flex items-center gap-3 px-3 py-2 text-[#6E6E73] hover:bg-[#E8E8ED] transition-colors duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="dashboard">dashboard</span>
+<span class="text-sm font-medium">Overview</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-[#6E6E73] hover:bg-[#E8E8ED] transition-colors duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="delete">delete</span>
+<span class="text-sm font-medium">System Junk</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-[#6E6E73] hover:bg-[#E8E8ED] transition-colors duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="folder_zip">folder_zip</span>
+<span class="text-sm font-medium">Large Files</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-[#6E6E73] hover:bg-[#E8E8ED] transition-colors duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="content_copy">content_copy</span>
+<span class="text-sm font-medium">Duplicates</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-[#6E6E73] hover:bg-[#E8E8ED] transition-colors duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="apps">apps</span>
+<span class="text-sm font-medium">App Uninstaller</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-[#6E6E73] hover:bg-[#E8E8ED] transition-colors duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="terminal">terminal</span>
+<span class="text-sm font-medium">Developer Tools</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 bg-[#E8F3FF] text-[#007AFF] rounded-lg" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="assessment" style="font-variation-settings: 'FILL' 1;">assessment</span>
+<span class="text-sm font-medium">Clean Report</span>
+</a>
+</nav>
+<div class="px-6 py-4">
+<div class="bg-white/50 p-3 rounded-xl border border-[#D2D2D7]/50">
+<p class="text-[10px] text-[#6E6E73] uppercase tracking-wider font-bold mb-1">Disk Health</p>
+<div class="h-1.5 w-full bg-[#E8E8ED] rounded-full overflow-hidden">
+<div class="h-full bg-[#34C759] w-[82%]"></div>
+</div>
+<p class="text-[11px] text-[#1D1D1F] mt-2 font-medium">82% Healthy</p>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 flex flex-col relative overflow-hidden bg-white">
+<!-- TopAppBar Placeholder/Header -->
+<header class="flex items-center justify-between w-full h-12 px-8 sticky top-0 z-50 bg-white/80 backdrop-blur-md">
+<span class="text-sm font-semibold text-[#1D1D1F]">Clean Report</span>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-lg text-[#6E6E73] cursor-pointer" data-icon="settings">settings</span>
+<div class="w-7 h-7 rounded-full bg-surface-container-high flex items-center justify-center text-[10px] font-bold">JD</div>
+</div>
+</header>
+<div class="flex-1 overflow-y-auto px-8 pt-6 pb-24">
+<!-- Success Splash Section -->
+<section class="flex flex-col items-center text-center mb-10">
+<div class="w-16 h-16 bg-[#34C759] rounded-full flex items-center justify-center mb-4 shadow-lg shadow-[#34C759]/20">
+<span class="material-symbols-outlined text-white text-4xl" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<h1 class="text-3xl font-extrabold text-[#1D1D1F] tracking-tight mb-2">Clean Complete!</h1>
+<p class="text-lg text-[#6E6E73]">Your Mac is now <span class="text-[#1D1D1F] font-semibold">8.3 GB</span> lighter</p>
+</section>
+<!-- Analytics Grid -->
+<div class="grid grid-cols-2 gap-6 mb-8">
+<!-- Session Stats -->
+<div class="bg-[#F5F5F7] p-6 rounded-2xl border border-[#D2D2D7]/30">
+<h3 class="text-sm font-bold text-[#1D1D1F] mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="data_usage">data_usage</span>
+                            This Session
+                        </h3>
+<div class="space-y-6">
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-xs font-semibold text-[#6E6E73]">Before Cleanup</span>
+<span class="text-xs font-bold text-[#1D1D1F]">124.5 GB</span>
+</div>
+<div class="h-3 w-full bg-white rounded-full overflow-hidden shadow-inner">
+<div class="h-full bg-[#D2D2D7] w-full"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-xs font-semibold text-[#6E6E73]">After Cleanup</span>
+<span class="text-xs font-bold text-primary">116.2 GB</span>
+</div>
+<div class="h-3 w-full bg-white rounded-full overflow-hidden shadow-inner">
+<div class="h-full bg-primary w-[93.3%]"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Breakdown Chart -->
+<div class="bg-[#F5F5F7] p-6 rounded-2xl border border-[#D2D2D7]/30 flex flex-col lg:flex-row items-center gap-6">
+<div class="donut-chart flex-shrink-0"></div>
+<div class="flex-1 w-full space-y-3">
+<h3 class="text-sm font-bold text-[#1D1D1F] mb-1">Breakdown</h3>
+<div class="flex items-center justify-between text-xs">
+<div class="flex items-center gap-2">
+<div class="w-2.5 h-2.5 rounded-full bg-[#007AFF]"></div>
+<span class="text-[#6E6E73]">System Junk</span>
+</div>
+<span class="font-bold text-[#1D1D1F]">3.6 GB</span>
+</div>
+<div class="flex items-center justify-between text-xs">
+<div class="flex items-center gap-2">
+<div class="w-2.5 h-2.5 rounded-full bg-[#34C759]"></div>
+<span class="text-[#6E6E73]">Large Files</span>
+</div>
+<span class="font-bold text-[#1D1D1F]">3.2 GB</span>
+</div>
+<div class="flex items-center justify-between text-xs">
+<div class="flex items-center gap-2">
+<div class="w-2.5 h-2.5 rounded-full bg-[#FF9500]"></div>
+<span class="text-[#6E6E73]">Dev Tools</span>
+</div>
+<span class="font-bold text-[#1D1D1F]">1.5 GB</span>
+</div>
+</div>
+</div>
+</div>
+<!-- History Table -->
+<div class="bg-white rounded-2xl border border-[#D2D2D7] overflow-hidden">
+<div class="px-6 py-4 border-b border-[#D2D2D7] bg-[#F5F5F7]">
+<h3 class="text-sm font-bold text-[#1D1D1F]">Recent Activity</h3>
+</div>
+<table class="w-full text-left">
+<thead>
+<tr class="text-[10px] uppercase tracking-wider text-[#6E6E73] font-bold border-b border-[#D2D2D7]/30">
+<th class="px-6 py-3">Date</th>
+<th class="px-6 py-3">Space Freed</th>
+<th class="px-6 py-3">Categories</th>
+<th class="px-6 py-3">Duration</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-[#D2D2D7]/30">
+<tr class="text-sm hover:bg-[#F5F5F7]/50 transition-colors">
+<td class="px-6 py-4 text-[#1D1D1F] font-medium">Oct 24, 2023, 14:32</td>
+<td class="px-6 py-4 text-[#34C759] font-bold">8.3 GB</td>
+<td class="px-6 py-4 text-[#6E6E73]">System Junk, Large Files, Dev...</td>
+<td class="px-6 py-4 text-[#6E6E73]">2m 45s</td>
+</tr>
+<tr class="text-sm hover:bg-[#F5F5F7]/50 transition-colors">
+<td class="px-6 py-4 text-[#1D1D1F] font-medium">Oct 18, 2023, 09:15</td>
+<td class="px-6 py-4 text-[#34C759] font-bold">12.1 GB</td>
+<td class="px-6 py-4 text-[#6E6E73]">Large Files, Duplicates</td>
+<td class="px-6 py-4 text-[#6E6E73]">4m 12s</td>
+</tr>
+<tr class="text-sm hover:bg-[#F5F5F7]/50 transition-colors">
+<td class="px-6 py-4 text-[#1D1D1F] font-medium">Oct 12, 2023, 11:40</td>
+<td class="px-6 py-4 text-[#34C759] font-bold">2.4 GB</td>
+<td class="px-6 py-4 text-[#6E6E73]">App Uninstaller</td>
+<td class="px-6 py-4 text-[#6E6E73]">1m 05s</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Sticky Footer Action -->
+<div class="absolute bottom-0 left-0 w-full p-6 bg-white/80 backdrop-blur-xl border-t border-[#D2D2D7]/30 flex justify-center">
+<button class="bg-[#007AFF] text-white px-10 py-2.5 rounded-lg font-bold text-sm hover:bg-[#005BC2] transition-all shadow-lg shadow-[#007AFF]/20 flex items-center gap-2">
+<span class="material-symbols-outlined text-lg" data-icon="sync">sync</span>
+                    Scan Again
+                </button>
+</div>
+</main>
+</div>
+</body></html>
